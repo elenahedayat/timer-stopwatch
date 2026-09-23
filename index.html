@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch & Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <nav class="tabs">
+      <button type="button" class="tab active" data-mode="stopwatch">Stopwatch</button>
+      <button type="button" class="tab" data-mode="timer">Timer</button>
+    </nav>
+
+    <section class="circle">
+      <p class="time" id="time">00:00:00</p>
+
+      <div class="edit-time" id="edit-time" hidden>
+        <input type="number" id="edit-h" min="0" max="99" value="0" />
+        <span>:</span>
+        <input type="number" id="edit-m" min="0" max="59" value="1" />
+        <span>:</span>
+        <input type="number" id="edit-s" min="0" max="59" value="0" />
+      </div>
+    </section>
+
+    <div class="controls">
+      <button type="button" id="start">Start</button>
+      <button type="button" id="stop">Stop</button>
+      <button type="button" id="reset">Reset</button>
+      <button type="button" id="lap">Lap</button>
+    </div>
+
+    <section class="laps" id="laps"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
